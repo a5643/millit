@@ -1,1 +1,254 @@
-# millit
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>村山動能科技有限公司</title>
+
+<style>
+/* ===== 基本 ===== */
+body {
+  margin: 0;
+  font-family: "Microsoft JhengHei", sans-serif;
+  background: #0a0f1c;
+  color: #e5e7eb;
+  scroll-behavior: smooth;
+}
+
+/* ===== Navbar ===== */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* ===== Hero ===== */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(circle at center, #1e3a8a, #020617);
+}
+
+.hero h1 {
+  font-size: 48px;
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  color: #9ca3af;
+}
+
+/* ===== Section ===== */
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===== 卡片 ===== */
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px;
+  flex: 1;
+  transition: 0.4s;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px #3b82f6;
+}
+
+/* ===== Flex ===== */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* ===== 圖片 ===== */
+.image-box img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* ===== 表單 ===== */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  background: #3b82f6;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+/* ===== 動畫 ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1s;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 40px;
+  background: #020617;
+}
+
+/* 手機 */
+@media(max-width:768px){
+  .flex { flex-direction: column; }
+  .hero h1 { font-size: 32px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div>村山動能科技</div>
+  <div>
+    <a href="#about">服務</a>
+    <a href="#tech">技術</a>
+    <a href="#contact">聯絡</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div>
+    <h1>電機馬達性能測試平台</h1>
+    <p>高精度 × 高穩定 × 客製化系統整合</p>
+  </div>
+</div>
+
+<!-- 服務 -->
+<section id="about" class="fade-in">
+  <h2>服務內容</h2>
+  <div class="flex">
+    <div class="card">
+      <h3>支援馬達</h3>
+      <p>工業馬達、BLDC、伺服馬達、電動車馬達等</p>
+    </div>
+    <div class="card">
+      <h3>性能測試</h3>
+      <p>扭力、轉速、效率、負載分析</p>
+    </div>
+    <div class="card">
+      <h3>電源系統</h3>
+      <p>三相電源、變頻器、DC模擬</p>
+    </div>
+  </div>
+</section>
+
+<!-- 技術 + 圖片 -->
+<section id="tech" class="fade-in">
+  <h2>測試平台</h2>
+  <div class="flex">
+    <div class="card image-box">
+      <!-- 這裡放你的圖片 -->
+      <img src="your-image.png" alt="設備圖">
+    </div>
+    <div class="card">
+      <h3>核心能力</h3>
+      <ul>
+        <li>功率分析</li>
+        <li>扭力量測</li>
+        <li>效率曲線</li>
+        <li>溫升測試</li>
+        <li>數據報表輸出</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 流程 -->
+<section class="fade-in">
+  <h2>服務流程</h2>
+  <div class="flex">
+    <div class="card">需求評估</div>
+    <div class="card">系統設計</div>
+    <div class="card">安裝測試</div>
+    <div class="card">售後支援</div>
+  </div>
+</section>
+
+<!-- 聯絡 -->
+<section id="contact" class="fade-in">
+  <h2>聯絡我們</h2>
+  <form>
+    <input type="text" placeholder="您的姓名">
+    <input type="email" placeholder="Email">
+    <textarea placeholder="需求內容"></textarea>
+    <button>送出詢問</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer>
+  <h2>村山動能科技有限公司</h2>
+  <p>📞 04-25299736</p>
+  <p>📧 x872402@hotmail.com</p>
+</footer>
+
+<!-- JS動畫 -->
+<script>
+const elements = document.querySelectorAll('.fade-in');
+
+window.addEventListener('scroll', () => {
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.classList.add('show');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
